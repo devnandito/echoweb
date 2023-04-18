@@ -1,0 +1,27 @@
+<html>
+    <body>
+      <table class="table table-bordered table-striped dt-responsive tablas">
+        <thead>
+          <tr>
+            {{ range .Headers }}
+              <th>{{.}}</th>
+            {{ end}}
+          </tr>
+        </thead>
+        <tbody>
+          {{ range .Objects}}
+          <tr>
+            <td>{{.ID}}</td>
+            <td>{{.Description}}</td>
+            <td>
+              <div class="btn-groups">
+                <a href="" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
+                <a href="" class="btn btn-danger"><i class="fa fa-times"></i></a>
+              </div>
+            </td>
+          </tr>
+          {{end}}
+        </tbody>
+      </table>
+    </body>
+</html>
